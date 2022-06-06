@@ -33,7 +33,7 @@ app.listen(PORT, (error) => {
 mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((res) => {
-    console.log(successMsg('Connected to MongoDB'), res.Collection.dbName);
+    console.log(successMsg('Connected to MongoDB'), res);
   })
   .catch((err) => {
     console.log(errorMsg('Error: ', err));
